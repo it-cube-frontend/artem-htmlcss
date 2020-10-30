@@ -1,0 +1,42 @@
+:root {
+    --color-black:#000000;
+    --color-white:#ffffff;
+    --color-grey: #F2F2F2;
+    --color-brawn: #766357;
+}
+
+/*
+header {
+    height: ;
+    color: ;
+}
+*/
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--color-black);
+    background-color:  var(--color-white);
+    text-align: center; 
+    text-decoration: none;
+
+}
+
+h1 {
+
+}
+
+p {
+
+}
+
+.main-menu {
+    list-style: none;
+    font-weight: 700;
+    text-decoration: none;
+}
+ 
+footer {
+    color:;
+}
