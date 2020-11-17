@@ -1,0 +1,207 @@
+:root {
+    --color-black: #000;
+    --color-black-light: O#333; 
+    --color-white: #fff; 
+    --color-blue: #81B3D2;
+    --color-blue-dark: #669EC0; 
+    --color-blue-extra-dark: #5496BD;
+    --color-grey: #F2F2F2;
+    --color-grey-dark: #EEEEEE;
+    --color-brawn: #766357; 
+    --color-brawn-dark: #604E43; 
+    --color-brawn-extra-dark: #503E33;
+
+    /* 99 103
+      103 108
+    добавить opasity!!!! 
+    */
+    }
+    
+    body {
+        font-family: "PT Sans", sans-serif;
+        font-size: 14px;
+        line-height: 26px;
+        color: var(--color-black);
+        background-color:  var(--color-white);
+        /*text-align: center;*/
+    }
+    .main-menu {
+        list-style: none;   
+    }
+    
+    .main-menu a {
+        color: var(--color-black);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .main-menu a:hover {
+        color: var(--color-blue);
+    }
+
+    .main-menu a:active {
+        color: var(--color-blue-extra-dark);
+    }
+ 
+    .main-page h1{
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+    
+    .features h3 {
+        font-size: 21px;
+        line-height: 21px;
+        font-weight: 700;
+    }
+    
+    .features ul {
+        list-style: none;
+    }
+
+    .five-reasons {
+        background-color: var(--color-blue-dark);
+        color: var(--color-white);
+    }
+
+    .reasons {
+        background-color: var(--color-grey-dark)
+    }
+
+    .search button {
+        font-size: 21px;
+        color: var(--color-white);
+        font-weight: 700;
+        border: none;
+        background-color: var(--color-brawn);  
+    }
+
+    .search button:hover {
+        color: var(--color-brawn-dark)
+    }
+
+    .search button:active {
+        color: var(--color-brawn-extra-dark)
+    }
+
+    .question {
+        font-size: 30;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .main-footer ul p {
+        color: var(--color-black);
+        list-style: none;
+        font-size: 21;
+        line-height: 5;
+        font-weight: 700;
+    }
+
+    .button:hover {
+        color: var(--color-blue-dark);
+        opacity: 0.3;
+    }
+
+    .button:active {
+        color: var(--color-blue-extra-dark);
+        opacity: 0.3;
+    }
+  
+
+
+
+    .button-search { 
+        font-size: 21px;
+        color: var(--color-white);
+        font-weight: 700;
+        border: none;
+        background-color: var(--color-blue);
+    }
+
+    .button-search:hover {
+        color: var(--color-white);
+        background-color: var(--color-blue-dark);
+    }
+
+    .button-search:active {
+        color: var(--color-blue);
+        background-color: var(--color-blue-extra-dark);
+    }
+
+    /* ===================== HOTELS ============================ */
+
+    .sorting {
+        color: var(--color-black);
+        opacity: 0.3;
+        text-transform: uppercase;
+        list-style: none;
+    }
+    /* 
+    
+    
+    */
+
+    .show {
+        font: size 21px;
+        font-weight: 700;
+        background-color: ;
+        color: var(--color-white);
+        border: 20px solid #FFFFFF;
+    }
+
+    .show:active {
+        color: red;
+        background-color: ;
+    }
+
+    .show:hover {
+
+    }
+
+    /*кнопка забронировать*/
+
+    .searched-button--brawn {
+        font-size: 21px;
+        color: var(--color-white);
+        font-weight: 700;
+        border: none;
+        background-color: var(--color-brawn);
+    }
+
+    /*.searched-button {
+    }
+    */
+
+    .searched-button--brawn:hover {
+        color: var(--color-white);
+        background-color: var(--color-brawn-dark) ;
+    }
+
+    .searched-button--brawn:active {
+        color: var(--color-brawn);
+        background-color: var(--color-brawn-extra-dark) ;
+    }
+
+    /* кнопка показать */
+    .searched-button--blue { 
+        font-size: 21px;
+        color: var(--color-white);
+        font-weight: 700;
+        border: none;
+        background-color: var(--color-blue);
+    }
+
+    .searched-button--blue:hover {
+        color: var(--color-white);
+        background-color: var(--color-blue-dark);
+    }
+
+    .searched-button--blue:active {
+        color: var(--color-blue);
+        background-color: var(--color-blue-extra-dark);
+    }
+
+    .sorting-search {
+        list-style: none;
+    }
