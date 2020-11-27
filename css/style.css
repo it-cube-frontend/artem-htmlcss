@@ -1,7 +1,8 @@
 :root {
     --color-black: #000;
-    --color-black-light: O#333; 
+    --color-black-light: #333; 
     --color-white: #fff; 
+    --color-white-opacity: rgba(255, 255, 255, .3);
     --color-blue: #81B3D2;
     --color-blue-dark: #669EC0; 
     --color-blue-extra-dark: #5496BD;
@@ -11,9 +12,11 @@
     --color-brawn-dark: #604E43; 
     --color-brawn-extra-dark: #503E33;
 
-    /* 99 103
-      103 108
-    добавить opasity!!!! 
+    /* поменять цвет текста у коричневой кнопки
+    display gride
+    gride 
+    min heidht 100px
+    margin 0 auto
     */
     }
     
@@ -25,6 +28,7 @@
         background-color:  var(--color-white);
         /*text-align: center;*/
     }
+    
     .main-menu {
         list-style: none;   
     }
@@ -37,10 +41,12 @@
 
     .main-menu a:hover {
         color: var(--color-blue);
+
     }
 
     .main-menu a:active {
-        color: var(--color-blue-extra-dark);
+        color: var(--color-black);
+        opacity: 0.3;
     }
  
     .main-page h1{
@@ -90,12 +96,22 @@
         line-height: 24px;
     }
 
-    .main-footer ul p {
+    .main-footer p {
         color: var(--color-black);
         list-style: none;
-        font-size: 21;
         line-height: 5;
-        font-weight: 700;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 26px;
+    }
+    .main-footer ul {
+        list-style: none;
+    }
+    
+    .website-by {
+        font-size: 14px;
+        line-height: 26px;
+        text-transform: uppercase;
     }
 
     .button:hover {
@@ -107,9 +123,6 @@
         color: var(--color-blue-extra-dark);
         opacity: 0.3;
     }
-  
-
-
 
     .button-search { 
         font-size: 21px;
@@ -137,10 +150,6 @@
         text-transform: uppercase;
         list-style: none;
     }
-    /* 
-    
-    
-    */
 
     .show {
         font: size 21px;
@@ -175,12 +184,12 @@
 
     .searched-button--brawn:hover {
         color: var(--color-white);
-        background-color: var(--color-brawn-dark) ;
+        background-color: var(--color-brawn-dark);
     }
 
     .searched-button--brawn:active {
-        color: var(--color-brawn);
-        background-color: var(--color-brawn-extra-dark) ;
+        color: var(--color-white);
+        background-color: var(--color-brawn-extra-dark);
     }
 
     /* кнопка показать */
