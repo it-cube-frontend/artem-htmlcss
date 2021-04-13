@@ -1,11 +1,12 @@
 const setup = document.querySelector('.setup');
 // console.log(setup.className);
-setup.classList.remove('hidden');
+// setup.classList.remove('hidden');
 
 let wizardName = ['Иван', 'Хуан Себастьян', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
 let wizardSurname = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
 let coatColor = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)' ,'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
 let eyesColor = ['black', 'red', 'blue', 'yellow', 'green'];
+let wizardFireballColor = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
 
 const numbers = [1,2,3,3,4,5,6];
 
@@ -91,13 +92,53 @@ const createWizardElement = (obj) => {
 }
 fillWizards(wizards);
 
-
-
-
-
 const setupSimilar = document.querySelector('.setup-similar');
-// console.log(setupSimilar);
-setupSimilar.classList.remove('hidden');
+ setupSimilar.classList.remove('hidden');
+
+//  открытие окна
+let popup = document.querySelector('.setup-open');
+let openPopupButton = document.querySelector('.setup-open');
+
+openPopupButton.addEventListener('click', function () {
+    setup.classList.remove('hidden');
+});
+// закрытие окна
+let closePopupButton = setup.querySelector('.setup-close');
+closePopupButton.addEventListener('click', function () {
+    setup.classList.add('hidden');
+});
+
+// окно настройки персонажа  открывается при нажати ENTER
+document.addEventListener('keydown', function(evt) {
+    // console.log(evt.code);
+    if (evt.code === 'Enter') {
+        setup.classList.remove('hidden')
+    }
+  });
 
 
+// окно настройки персонажа  закрывается при нажати ESC
+document.addEventListener('keydown', function(evt) {
+    // console.log(evt.code);
+    if (evt.code === 'Escape') {
+        setup.classList.add('hidden')
+    }
+  });
 
+// меняем цвет мантии
+let wizardCoatColor = document.querySelector('.setup-wizard .wizard-coat');
+wizardCoatColor.addEventListener('click', function() {
+    wizardCoatColor.style.fill = getRandomItem(coatColor);
+});
+
+// меняем цвет глаз 
+let wizardEyesColor = document.querySelector('.setup-wizard .wizard-eyes');
+wizardEyesColor.addEventListener('click', function() {
+    wizardEyesColor.style.fill = getRandomItem(eyesColor);
+});
+
+// меняем цвет фаербола
+let fireballColor = document.querySelector('.setup-fireball-wrap');
+fireballColor.addEventListener('click', function() {
+    fireballColor.style.background = getRandomItem(wizardFireballColor);
+});

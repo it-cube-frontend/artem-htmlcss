@@ -66,10 +66,6 @@ window.renderStatistics = function(ctx, names, times) {
         ctx.fillStyle = "black";
         ctx.fillText(time, timeX, timeY);
     }
-
-    
 }
-
-
 
 
