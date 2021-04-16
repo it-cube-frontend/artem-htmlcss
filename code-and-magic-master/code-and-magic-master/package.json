@@ -4,12 +4,14 @@
   "private": true,
   "description": "",
   "devDependencies": {
+    "browser-sync": "2.26.14",
     "eslint": "7.1.0",
     "eslint-config-htmlacademy": "0.6.0"
   },
   "license": "MIT",
   "dependencies": {},
   "scripts": {
+    "start": "browser-sync start --server './' --files './'",
     "test": "eslint js/"
   },
   "engines": {

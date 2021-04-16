@@ -1,0 +1,72 @@
+mobile@s03 MINGW64 ~
+$ node -v
+v14.16.1
+
+mobile@s03 MINGW64 ~
+$ npm -v
+6.14.12
+
+mobile@s03 MINGW64 ~
+$ pwd
+/c/Users/mobile
+
+mobile@s03 MINGW64 ~
+$ cd Desktop\Artyom\artem-htmlcss\code-and-magic-master\code-and-magic-master
+bash: cd: DesktopArtyomartem-htmlcsscode-and-magic-mastercode-and-magic-master: No such file or directory
+
+mobile@s03 MINGW64 ~
+$ cd Desktop/Artyom/artem-htmlcss/code-and-magic-master/
+
+mobile@s03 MINGW64 ~/Desktop/Artyom/artem-htmlcss/code-and-magic-master (master)
+$ ls
+code-and-magic-master/
+
+mobile@s03 MINGW64 ~/Desktop/Artyom/artem-htmlcss/code-and-magic-master (master)
+$ cd code-and-magic-master/
+
+mobile@s03 MINGW64 ~/Desktop/Artyom/artem-htmlcss/code-and-magic-master/code-and-magic-master (master)
+$ ls
+css/         fonts/  index.html  package.json       Readme.md
+favicon.ico  img/    js/         package-lock.json
+
+mobile@s03 MINGW64 ~/Desktop/Artyom/artem-htmlcss/code-and-magic-master/code-and-magic-master (master)
+$ npm install -DE browser-sync
+
+
+mobile@s03 MINGW64 ~/Desktop/Artyom/artem-htmlcss/code-and-magic-master/code-and-magic-master (master)
+$ npm install -DE browser-sync
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ browser-sync@2.26.14
+added 311 packages from 298 contributors and audited 312 packages in 20.499s
+
+15 packages are looking for funding
+  run `npm fund` for details
+
+found 4 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+mobile@s03 MINGW64 ~/Desktop/Artyom/artem-htmlcss/code-and-magic-master/code-and-magic-master (master)
+$ npm start
+
+> code-and-magick@19.0.0 start C:\Users\mobile\Desktop\Artyom\artem-htmlcss\code-and-magic-master\code-and-magic-master
+> browser-sync start --server './' --files './'
+
+[Browsersync] Access URLs:
+ ---------------------------------------
+       Local: http://localhost:3000
+    External: http://192.168.31.165:3000
+ ---------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ ---------------------------------------
+[Browsersync] Serving files from: ./
+
+
+
+
+
+https://nodejs.org/en/ 14,16,
+https://browsersync.io/docs/command-line
+https://browsersync.io/
