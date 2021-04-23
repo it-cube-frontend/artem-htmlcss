@@ -1,3 +1,4 @@
+import {getRandomItem} from './util.js';
 
 let wizardName = ['Иван', 'Хуан Себастьян', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
 let wizardSurname = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
@@ -5,14 +6,7 @@ let coatColor = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)'
 let eyesColor = ['black', 'red', 'blue', 'yellow', 'green'];
 let wizardFireballColor = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
 
-const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-}
 
-const getRandomItem = (arr) => { 
-    const randomIndex = getRandomInt(arr.length)
-    return arr[randomIndex];
-}
 
 const generateWizard = () => {
     const wizard = {
@@ -30,4 +24,8 @@ export const generateWizards = function(number) {
         arr[i] = wizard;
     }
     return arr;
+}
+
+export const getRandomFireballColor = () => {
+    return getRandomItem(wizardFireballColor)
 }

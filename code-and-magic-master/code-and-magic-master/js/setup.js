@@ -1,16 +1,6 @@
-import {generateWizards} from './data.js';
+import {generateWizards, getRandomFireballColor} from './data.js';
+import {getRandomItem} from './util.js'
 const setup = document.querySelector('.setup');
-// console.log(setup.className);
-// setup.classList.remove('hidden');
-
-
-const numbers = [1,2,3,3,4,5,6];
-
-
-// const wizard = generateWizard();
-// console.log(wizard);
-
-
 const wizards = generateWizards(4);
 const similarList = document.querySelector('.setup-similar-list');
 
@@ -20,7 +10,6 @@ const fillWizards = function(arr) {
         similarList.appendChild(wizardElement);
     }
 }
-
 
 const wizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 // console.log(wizardTemplate);
@@ -40,10 +29,10 @@ const setupSimilar = document.querySelector('.setup-similar');
 //  открытие окна
 let popup = document.querySelector('.setup-open');
 let openPopupButton = document.querySelector('.setup-open');
-
 openPopupButton.addEventListener('click', function () {
     setup.classList.remove('hidden');
 });
+
 // закрытие окна
 let closePopupButton = setup.querySelector('.setup-close');
 closePopupButton.addEventListener('click', function () {
@@ -82,5 +71,5 @@ wizardEyesColor.addEventListener('click', function() {
 // меняем цвет фаербола
 let fireballColor = document.querySelector('.setup-fireball-wrap');
 fireballColor.addEventListener('click', function() {
-    fireballColor.style.background = getRandomItem(wizardFireballColor);
+    fireballColor.style.background = getRandomFireballColor();
 });

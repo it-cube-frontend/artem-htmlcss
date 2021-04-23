@@ -70,3 +70,11 @@ $ npm start
 https://nodejs.org/en/ 14,16,
 https://browsersync.io/docs/command-line
 https://browsersync.io/
+
+
+$ pwd
+$ cd Desktop/Artyom/artem-htmlcss/code-and-magic-master/
+$ ls
+$ cd code-and-magic-master/
+$ ls
+$ npm start
