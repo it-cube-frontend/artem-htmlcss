@@ -1,12 +1,13 @@
 import {generateWizards, getRandomFireballColor} from './data.js';
 import {getRandomItem} from './util.js'
+import {getSomething} from './server.js'
 const setup = document.querySelector('.setup');
 const wizards = generateWizards(4);
 const similarList = document.querySelector('.setup-similar-list');
 
 const fillWizards = function(arr) {
     for (let i = 0; i < arr.length; i += 1) {
-        const wizardElement = createWizardElement(wizards[i]);
+        const wizardElement = createWizardElement(arr[i]);
         similarList.appendChild(wizardElement);
     }
 }
@@ -17,20 +18,26 @@ const wizardTemplate = document.querySelector('#similar-wizard-template').conten
 const createWizardElement = (obj) => {
     const wizard = wizardTemplate.cloneNode(true);
     wizard.querySelector('.setup-similar-label').textContent = obj.name; // имя
-    wizard.querySelector('.wizard-coat').style.fill = obj.coatColor; // Цвет
-    wizard.querySelector('.wizard-eyes').style.fill = obj.eyesColor; // цвет глаз
+    wizard.querySelector('.wizard-coat').style.fill = obj.colorCoat; // Цвет
+    wizard.querySelector('.wizard-eyes').style.fill = obj.colorEyes; // цвет глаз
     return wizard;
 }
-fillWizards(wizards);
+// fillWizards(wizards);
 
 const setupSimilar = document.querySelector('.setup-similar');
  setupSimilar.classList.remove('hidden');
 
 //  открытие окна
+const onServerSuccess = function(d) {
+    // console.log(d);
+    fillWizards(d.slice(0, 4))
+
+}
 let popup = document.querySelector('.setup-open');
 let openPopupButton = document.querySelector('.setup-open');
 openPopupButton.addEventListener('click', function () {
     setup.classList.remove('hidden');
+    getSomething(onServerSuccess);
 });
 
 // закрытие окна
