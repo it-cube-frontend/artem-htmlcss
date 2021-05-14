@@ -29,3 +29,13 @@ export const generateWizards = function(number) {
 export const getRandomFireballColor = () => {
     return getRandomItem(wizardFireballColor)
 }
+
+
+export const getRandomCoatColor = () => {
+    return getRandomItem(coatColor)
+}
+
+
+export const getRandomEyesColor = () => {
+    return getRandomItem(eyesColor)
+}

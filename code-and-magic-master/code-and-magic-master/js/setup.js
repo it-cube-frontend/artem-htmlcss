@@ -1,6 +1,6 @@
-import {generateWizards, getRandomFireballColor} from './data.js';
+import {generateWizards, getRandomFireballColor, getRandomCoatColor, getRandomEyesColor} from './data.js';
 import {getRandomItem} from './util.js'
-import {getSomething} from './server.js'
+import {getSomething, sendData} from './server.js'
 const setup = document.querySelector('.setup');
 const wizards = generateWizards(4);
 const similarList = document.querySelector('.setup-similar-list');
@@ -66,13 +66,13 @@ document.addEventListener('keydown', function(evt) {
 // меняем цвет мантии
 let wizardCoatColor = document.querySelector('.setup-wizard .wizard-coat');
 wizardCoatColor.addEventListener('click', function() {
-    wizardCoatColor.style.fill = getRandomItem(coatColor);
+    wizardCoatColor.style.fill = getRandomCoatColor();
 });
 
 // меняем цвет глаз 
 let wizardEyesColor = document.querySelector('.setup-wizard .wizard-eyes');
 wizardEyesColor.addEventListener('click', function() {
-    wizardEyesColor.style.fill = getRandomItem(eyesColor);
+    wizardEyesColor.style.fill = getRandomEyesColor();
 });
 
 // меняем цвет фаербола
@@ -80,3 +80,17 @@ let fireballColor = document.querySelector('.setup-fireball-wrap');
 fireballColor.addEventListener('click', function() {
     fireballColor.style.background = getRandomFireballColor();
 });
+
+
+const onSendSuccess = (res) => {
+    setup.classList.add('hidden');
+}
+const onSendError = (error) => {
+    console.log(error);
+}
+const formElement = setup.querySelector('.setup-wizard-form');
+formElement.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    const data = new FormData(formElement);
+    sendData(data, onSendSuccess, onSendError)
+})

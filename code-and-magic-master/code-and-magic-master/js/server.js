@@ -8,3 +8,21 @@ export const getSomething = (onSuccess) => {
     })
     .catch((error) => {})
 }
+
+export const sendData = (data, onSuccess, onError) => {
+    const promise = fetch('https://22.javascript.pages.academy/code-and-magi', {
+        method: 'POST',
+        body: data
+    });
+    
+    promise.then((res) => {
+        if (res.ok) {
+            onSuccess(res);
+        } else {
+            throw new Error(`Error: ${res.status} - ${res.statusText}`)
+        }
+    })
+    .catch((error) => {
+        onError(error)
+    })
+}
